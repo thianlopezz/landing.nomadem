@@ -1,113 +1,213 @@
-import Image from 'next/image'
+import Image from "next/image";
+import LinkButton from "./components/LinkButton";
+import FeatureCard from "./components/FeatureCard";
+import Accordion from "./components/Accordion";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
+    <>
+      <div
+        className="flex flex-col justify-between items-center justify-center min-h-screen bg-blue-100 bg-center bg-no-repeat bg-cover bg-fixed"
+        style={{
+          // backgroundImage: "url('/pikb28.jpg')",
+          // backgroundImage: "url('/tropical-7980005_1920.png')",
+          backgroundImage: "url('/hlmb_zo31_121022.jpg')",
+          // backgroundImage: "url('/beach-2960959_1920.jpg')",
+        }}
+      >
+        <div className="flex justify-around h-24 w-full">
+          <div className="my-auto">
             <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
+              src="/nomadem_logotipo.png"
+              alt="Logo Nomadem"
+              width="200"
+              height="100"
+              className=""
             />
-          </a>
+          </div>
+          <LinkButton
+            className="my-auto"
+            href="https://www.nomadem.cloud/login"
+            target="_blank"
+            text="Login"
+            variant="secondary"
+          />
+        </div>
+        <div className="text-center mt-5">
+          <h1 className="text-6xl font-bold text-slate-800 mb-3">Nomadem</h1>
+          <h2 className="text-2xl text-slate-600">
+            Tu operadora de turismo en la nube
+          </h2>
+          <hr className="my-3 w-1/3 mx-auto" />
+          <p className="my-5 text-lg text-slate-600">
+            Regístrate gratis y empieza a organizar tus reservas.
+          </p>
+          <LinkButton
+            className="mt-4"
+            href="https://www.nomadem.cloud/"
+            target="_blank"
+            text="Regístrate"
+          />
+        </div>
+        <div className="text-center">
+          <Image
+            src="/traveler.gif"
+            alt="traveler"
+            width="200"
+            height="100"
+            className="h-1/4"
+          />
         </div>
       </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
+      <div className="flex flex-col items-center justify-center min-h-screen bg-blue-100 bg-center bg-no-repeat bg-cover">
+        <div className="text-center mt-10 mb-20">
+          <h2 className="text-4xl font-bold text-slate-800">¿Cómo funciona?</h2>
+          <hr className="my-3 w-1/3 mx-auto border-sky-900" />
+          <p className="mt-2 text-lg text-slate-600">
+            Administra todas tus reservas desde un solo lugar
+          </p>
+        </div>
+        <div className="grid lg:grid-cols-3 grid-cols-1 lg:gap-10 lg:mx-20 mx-10">
+          <FeatureCard
+            imgSrc="reshot-icon-travel-ZEY6NK3CA2.svg"
+            imgHeight={150}
+            imgWidth={150}
+            title="Gestión de Tours"
+            description="Nuestra plataforma te brinda el poder de crear, personalizar y ajustar tus emocionantes tours con unos pocos clics."
+          />
+          <FeatureCard
+            imgSrc="reshot-icon-visa-travel-document-TWNYHS3E42.svg"
+            imgHeight={150}
+            imgWidth={150}
+            title="Gestión de reservas"
+            description="Mantén el control total sobre las reservas de tus clientes. Confirma, modifica o reprograma reservas de manera eficiente para garantizar experiencias impecables."
+          />
+          <FeatureCard
+            imgSrc="reshot-icon-schedule-XKRBJ7E6WC.svg"
+            imgHeight={150}
+            imgWidth={150}
+            title="Calendario y disponibilidad"
+            description="Con nuestro sistema de calendario en tiempo real, nunca más te preocuparás por conflictos de horarios. Tus tours se mostrarán con disponibilidad actualizada, lo que facilitará la planificación."
+          />
+        </div>
+        <Accordion title="More">
+          <div className="grid lg:grid-cols-3 grid-cols-1 lg:gap-10 lg:mx-20 mx-10">
+            <FeatureCard
+              imgSrc="reshot-icon-partnership-PJAFKGN3E8.svg"
+              imgHeight={150}
+              imgWidth={150}
+              title="Circles"
+              description='Simplifica la colaboración y expande tu alcance, permitiendo que otras agencias/hoteles impulsen tus ventas y compartan tus emocionantes tours con sus clientes. Con "Circles", el crecimiento de tu negocio nunca ha sido tan sencillo y efectivo.'
+            />
+            <FeatureCard
+              imgSrc="reshot-icon-connection-3T6VJGAB2X.svg"
+              imgHeight={150}
+              imgWidth={150}
+              title="Gestión de clientes"
+              description="La información es poder, y con nuestra plataforma, tendrás una base de datos de clientes a tu alcance para brindar un servicio personalizado que los mantendrá regresando."
+            />
+            <FeatureCard
+              imgSrc="reshot-icon-statistics-MV85XR6QYW.svg"
+              imgHeight={150}
+              imgWidth={150}
+              title="Informes y análisis"
+              description="Toma decisiones informadas con nuestros informes y análisis detallados. Evalúa el rendimiento de tus tours y optimiza tu estrategia para maximizar la rentabilidad."
+            />
+            <FeatureCard
+              imgSrc="reshot-icon-check-list-U5GXFYBT6Z.svg"
+              imgHeight={125}
+              imgWidth={125}
+              title="Generación de lista de pasajeros"
+              description=" Con solo unos pocos clics, podrás crear listas detalladas de los pasajeros que participarán en cada tour. Ya no tendrás que preocuparte por errores de registro ni perder tiempo recopilando información manualmente."
+            />
+            <FeatureCard
+              imgSrc="reshot-icon-growth-DBFLU2JQGH.svg"
+              imgHeight={125}
+              imgWidth={125}
+              title="Adaptabilidad y escalabilidad"
+              description="Piensa en grande. Nuestra plataforma crece contigo, permitiéndote expandir tus ofertas y atender a más clientes sin perder calidad ni eficiencia."
+            />
+            <FeatureCard
+              imgSrc="reshot-icon-customer-support-3SF6V8G5NH.svg"
+              imgHeight={150}
+              imgWidth={150}
+              title="Soporte y asistencia técnica"
+              description="No estás solo. Nuestro equipo de asistencia está listo para brindarte ayuda en cualquier momento. ¡Mantén tu operación sin problemas con nuestro respaldo!."
+            />
+          </div>
+        </Accordion>
+      </div>
+      <div className="flex lg:flex-row flex-col-reverse items-center justify-center h-max bg-sky-900 lg:px-32 px-10 lg:py-28 py-20">
+        <div className="mt-10 mb-20 lg:w-2/5 w-full">
+          <h2 className="text-3xl font-bold text-sky-200">
+            ¿Ya usas una herramienta para tu operadora?
+          </h2>
+          <hr className="my-4 w-1/3" />
+          <p className="mt-2 text-lg text-sky-100">
+            Conéctate sin problemas con otras herramientas que utilizas.
+            Nuestras integraciones simplifican los procesos y te permiten
+            mantener todo bajo control.
+          </p>
+          <br />
+          <LinkButton
+            className="mt-10"
+            href="https://wa.me/593990901765?text=Hola,%20Nomadem%20tengo%20una%20pregunta"
+            target="_blank"
+            text="Pregúntanos"
+            variant="secondary"
+          />
+        </div>
+        <div className="lg:w-3/5 w-full">
+          <Image
+            src="/reshot-icon-network-connection-V3DXU4J7T2.svg"
+            alt="traveler"
+            width="300"
+            height="300"
+            className="m-auto"
+          />
+        </div>
+      </div>
+      <div className="flex flex-col items-center justify-center min-h-screen bg-blue-100 bg-center bg-no-repeat bg-cover">
+        <div className="text-center mt-10 mb-20">
+          <h2 className="text-3xl font-bold text-slate-800">
+            Operadoras que ya confían en nosotros
+          </h2>
+          <hr className="my-3 w-1/3 mx-auto border-sky-900" />
+        </div>
+        <div className="grid lg:grid-cols-3 grid-cols-1 lg:gap-10 lg:mx-20 mx-10">
+          <FeatureCard
+            imgSrc="/historical.png"
+            imgHeight={300}
+            imgWidth={300}
+            title="Historical Galapagos"
+            description="Tour Operator"
+          />
+          <FeatureCard
+            imgSrc="/xcursion.png"
+            imgHeight={150}
+            imgWidth={150}
+            title="Galapagos Xcursion"
+            description="Tour Agency"
+            url="https://www.galapagosxcursion.com/"
+          />
+          <FeatureCard
+            imgSrc="/dcristhi.png"
+            imgHeight={275}
+            imgWidth={275}
+            title="Grupo D' Cristhi"
+            description="Tour Operator & Hotel"
+          />
+        </div>
+      </div>
+      <div className="flex p-10 bg-sky-900">
         <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
+          src="/nomadem_logotipo_light.png"
+          alt="Logo Nomadem"
+          width="200"
+          height="100"
+          className="m-auto"
         />
       </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+    </>
+  );
 }
