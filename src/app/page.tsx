@@ -27,7 +27,7 @@ export default function Home() {
           </div>
           <LinkButton
             className="my-auto"
-            href="https://www.nomadem.cloud/login"
+            href="https://app.nomadem.cloud/login"
             target="_blank"
             text="Login"
             variant="secondary"
@@ -44,7 +44,7 @@ export default function Home() {
           </p>
           <LinkButton
             className="mt-4"
-            href="https://www.nomadem.cloud/"
+            href="https://app.nomadem.cloud/login#registro"
             target="_blank"
             text="Regístrate"
           />
