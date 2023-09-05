@@ -199,15 +199,67 @@ export default function Home() {
           />
         </div>
       </div>
-      <div className="flex p-10 bg-sky-900">
-        <Image
-          src="/nomadem_logotipo_light.png"
-          alt="Logo Nomadem"
-          width="200"
-          height="100"
-          className="m-auto"
-        />
-      </div>
+      {/* <div className="flex p-10 bg-sky-900">
+        <div className="mr-5">
+          <Image
+            src="/nomadem_logotipo_light.png"
+            alt="Logo Nomadem"
+            width="200"
+            height="100"
+            className="m-auto"
+          />
+        </div>
+        <div>
+          <h6>Links</h6>
+          <p>
+            <a href="/politica-de-privacidad">Política de privacidad</a>
+          </p>
+        </div>
+      </div> */}
+      <footer className="bg-sky-900 text-white py-8">
+        <div className="container mx-auto flex flex-col lg:flex-row items-center justify-around">
+          {/* <!-- Logo on the left --> */}
+          <div className="mb-4 lg:mb-0 lg:w-1/3">
+            <Image
+              src="/nomadem_logotipo_light.png"
+              alt="Logo Nomadem"
+              width="200"
+              height="100"
+              className="m-auto"
+            />
+          </div>
+
+          {/* <!-- Links columns with a title --> */}
+          <div className="flex flex-wrap justify-center lg:justify-between lg:w-2/3">
+            {/* <!-- Column 1 --> */}
+            <div className="w-full lg:w-1/2 mb-4 lg:mb-0">
+              <h4 className="text-xl font-semibold mb-2">Legal</h4>
+              <ul>
+                <li className="mb-2">
+                  <a href="/politica-de-privacidad">Política de privacidad</a>
+                </li>
+                <li className="mb-2">
+                  <a href="/terminos-y-condiciones">Términos y condiciones</a>
+                </li>
+                {/* <li>
+                  <a href="#">Link 2</a>
+                </li>
+                <li>
+                  <a href="#">Link 3</a>
+                </li> */}
+              </ul>
+            </div>
+            <div className="w-full lg:w-1/2 mb-4 lg:mb-0">
+              <h4 className="text-xl font-semibold mb-2">Otros links</h4>
+              <ul>
+                <li className="mb-2">
+                  <a href="/instrucciones-para-la-eliminacion-de-datos">Instrucciones para la eliminación de datos</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
     </>
   );
 }
