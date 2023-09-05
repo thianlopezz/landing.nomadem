@@ -16,10 +16,10 @@ export default function Privacy() {
 
       <p className="mb-4 text-justify">
         <strong>1.</strong> Ingresa a tu cuenta de Facebook y haz clic en
-        “Configuración y privacidad”. Después haz clic en “Configuración”.
+        &quot;Configuración y privacidad&quot;. Después haz clic en &quot;Configuración&quot;.
       </p>
       <p className="mb-4 text-justify">
-        <strong>2.</strong> Ve a la sección de “Apps y sitios web”, aquí podrás
+        <strong>2.</strong> Ve a la sección de &quot;Apps y sitios web&quot;, aquí podrás
         ver toda tu actividad relacionada a aplicaciones y páginas web
         registradas en tu cuenta de Facebook.
       </p>
@@ -33,7 +33,7 @@ export default function Privacy() {
         />
       </div>
       <p className="mb-4 text-justify">
-        <strong>3.</strong> Selecciona la casilla correspondiente a Nomadem App y haz clic en “Eliminar”.
+        <strong>3.</strong> Selecciona la casilla correspondiente a Nomadem App y haz clic en &quot;Eliminar&quot;.
       </p>
       <div className="mb-4 flex">
         <Image
@@ -45,7 +45,7 @@ export default function Privacy() {
         />
       </div>
       <p className="mb-4 text-justify">
-        <strong>3.</strong> Selecciona las casillas de acuerdo a tu preferencia y haz clic en “Eliminar”.
+        <strong>3.</strong> Selecciona las casillas de acuerdo a tu preferencia y haz clic en &quot;Eliminar&quot;.
       </p>
       <div className="mb-4 flex">
         <Image
