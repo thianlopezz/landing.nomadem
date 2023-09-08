@@ -34,7 +34,7 @@ export default function Accordion({ title, children }: AccordionProps) {
         {children}
       </div>
       <LinkButton
-        className="mx-auto cursor-pointer"
+        className={`mx-auto cursor-pointer ${!expanded ? "animate-pulse" : ""}`}
         text={`${!expanded ? "Ver más" : "Ver menos"}`}
         variant="secondary"
         onClick={toggleExpanded}

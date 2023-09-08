@@ -39,8 +39,8 @@ export default function Home() {
             Tu operadora de turismo en la nube
           </h2>
           <hr className="my-3 w-1/3 mx-auto" />
-          <p className="my-5 text-lg text-slate-600">
-            Regístrate gratis y empieza a organizar tus reservas.
+          <p className="my-5 text-lg text-slate-600 px-5 lg:px-0">
+            Regístrate gratis y empieza a organizar las reservas de tus clientes desde donde estés.
           </p>
           <LinkButton
             className="mt-4"
@@ -63,7 +63,7 @@ export default function Home() {
         <div className="text-center mt-10 mb-20">
           <h2 className="text-4xl font-bold text-slate-800">¿Cómo funciona?</h2>
           <hr className="my-3 w-1/3 mx-auto border-sky-900" />
-          <p className="mt-2 text-lg text-slate-600">
+          <p className="mt-2 text-lg text-slate-600 px-5 lg:px-0">
             Administra todas tus reservas desde un solo lugar
           </p>
         </div>
@@ -169,7 +169,7 @@ export default function Home() {
       </div>
       <div className="flex flex-col items-center justify-center min-h-screen bg-blue-100 bg-center bg-no-repeat bg-cover">
         <div className="text-center mt-10 mb-20">
-          <h2 className="text-3xl font-bold text-slate-800">
+          <h2 className="text-3xl font-bold text-slate-800 px-5 lg:px-0">
             Operadoras que ya confían en nosotros
           </h2>
           <hr className="my-3 w-1/3 mx-auto border-sky-900" />
@@ -230,7 +230,7 @@ export default function Home() {
           </div>
 
           {/* <!-- Links columns with a title --> */}
-          <div className="flex flex-wrap justify-center lg:justify-between lg:w-2/3">
+          <div className="flex flex-wrap justify-center lg:justify-between lg:w-2/3 px-5 lg:px-0">
             {/* <!-- Column 1 --> */}
             <div className="w-full lg:w-1/2 mb-4 lg:mb-0">
               <h4 className="text-xl font-semibold mb-2">Legal</h4>
