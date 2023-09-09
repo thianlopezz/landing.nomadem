@@ -28,7 +28,7 @@ export default function Home() {
           <LinkButton
             className="my-auto"
             href="https://app.nomadem.cloud/login"
-            target="_blank"
+            target="_system"
             text="Login"
             variant="secondary"
           />
@@ -152,7 +152,7 @@ export default function Home() {
           <LinkButton
             className="mt-10"
             href="https://wa.me/593990901765?text=Hola,%20Nomadem%20tengo%20una%20pregunta"
-            target="_blank"
+            target="_system"
             text="Pregúntanos"
             variant="secondary"
           />
